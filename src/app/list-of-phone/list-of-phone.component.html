@@ -1,0 +1,16 @@
+<div class="header-section">
+    <img src="assets/images/telephone.jpg" alt="Header Image" class="header-image">
+    <h1 class="header-title">Nos derniers produits</h1>
+  </div>
+
+<div class="phone-list-container">
+  <div class="phone-card" *ngFor="let phone of phones; let i = index" (click)="test(phone.id)">
+    <div class="phone-image">
+      <img [src]="phone.image" alt="{{ phone.name }}">
+    </div>
+    <div class="phone-details">
+      <h3>{{ phone.name }}</h3>
+      <p class="price">{{ phone.price }} €</p>
+      <button class="buy-btn">Acheter</button>
+    </div>
+</div>

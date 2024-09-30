@@ -1,0 +1,28 @@
+<div class="featured-product-container">
+    <div class="featured-phone-card">
+      <div class="featured-phone-image">
+        <img [src]="phone.image" alt="{{ phone.name }}">
+      </div>
+      <div class="featured-phone-details">
+        <h3>{{ phone.name }}</h3>
+        <p class="description">{{ phone.description }}</p>
+        <p class="price">{{ phone.price }} €</p>
+        <button class="buy-btn">Acheter maintenant</button>
+      </div>
+    </div>
+  </div>
+  
+  <h2 class="similar-products-title">Autres produits Similaires :</h2>
+  
+  <div class="recommended-products-container">
+    <div class="recommended-phone-card" *ngFor="let phoneAdd of otherPhone; let i = index" (click)="test(phoneAdd.id)">
+      <div class="recommended-phone-image">
+        <img [src]="phoneAdd.image" alt="{{ phoneAdd.name }}">
+      </div>
+      <div class="recommended-phone-details">
+        <h3>{{ phoneAdd.name }}</h3>
+        <p class="price">{{ phoneAdd.price }} €</p>
+      </div>
+    </div>
+  </div>
+  
